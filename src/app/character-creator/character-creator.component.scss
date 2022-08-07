@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  app-page-title {
+    position: fixed;
+    top: 1rem;
+    left: 0;
+    width: 100%;
+  }
+  app-character-thumbnail {
+    height: 40%;
+    width: 100%;
+  }
+  app-editable-text-input {
+    width: 100%;
+  }
+  app-character-bio {
+    width: 100%;
+  }
+  app-statistics {
+    width: 100%;
+  }
+}

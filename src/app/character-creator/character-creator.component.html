@@ -1,0 +1,20 @@
+<app-modal *ngIf="showModal" (modalClosed)="onCloseModal()">
+  <app-image-search (imageSelected)="onImageChanged($event)"></app-image-search>
+</app-modal>
+<div class="container">
+  <app-character-thumbnail
+    [source]="thumbNailUrl"
+    [height]="'40%'"
+    [position]="'top'"
+    (buttonClicked)="onChangeCharacterThumbnail($event)"
+  ></app-character-thumbnail>
+  <app-page-title [value]="pageTitle"></app-page-title>
+  <app-editable-text-input
+    [placeholder]="'Character\'s name'"
+  ></app-editable-text-input>
+  <app-character-bio class="character-bio"></app-character-bio>
+  <app-statistics
+    [stats]="statistics"
+    (changed)="onStatsChanged($event)"
+  ></app-statistics>
+</div>
